@@ -1,5 +1,4 @@
 -- Create a table to log basic information about people
-
 CREATE TABLE PeopleDatas1(
     IDNum int ,
     FirstName varchar(255) not null,
@@ -16,3 +15,5 @@ VALUES('1','Ram','Kumar','Mysuru','India'),
 
 insert into PeopleDatas1(FirstName,LastName)
 SELECT TOP (10) FirstName,LastName from Person.Person
+
+SELECT * FROM PeopleDatas1
