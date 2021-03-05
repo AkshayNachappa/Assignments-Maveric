@@ -2,7 +2,7 @@ ALTER PROCEDURE StateWisePop @columnName varchar(50)
 AS
 BEGIN
 DECLARE @sql nvarchar(max) = 'SELECT State_name, 
-SUM('+ @columnName+') as Tot_Population
+SUM('+@columnName+') as Tot_Population
 from Census
 group by State_name ';
 exec sp_executesql @sql, N'' 
