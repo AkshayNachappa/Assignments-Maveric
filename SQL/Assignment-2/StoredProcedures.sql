@@ -21,19 +21,3 @@ group by State_name'
 exec sp_executesql @sql, N'' 
 
 END
-
-ALTER PROCEDURE MaleOrFemale @columnName varchar(50)
---, @tableName varchar(50)
-AS
-BEGIN
-DECLARE @sql nvarchar(max) = 'SELECT'+@columnName+', 
-Case
-	WHEN '+@columnName+'>1 THEN ''Male Higher''
-	WHEN '+@columnName+'<1 THEN ''Female Higher''
-	ELSE ''Equal''
-END AS Comparison
-FROM combinedGenderCount'
-exec sp_executesql @sql, N'' 
-
-END
-
