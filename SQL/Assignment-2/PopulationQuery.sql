@@ -23,21 +23,13 @@ CREATE TABLE StateTable(
 State_name varchar(50),
 Tot_Population int,
 Avg_pop int,
-District_Count int,
-Male_Population int,
-Female_Population int,
-Sex_Ratio FLOAT
+District_Count int
 )
+-- joining Total,average and dsitrict count into one table
 INSERT INTO StateTable(State_name,Tot_Population,Avg_pop,District_Count)
 SELECT StateWisePopulation.State_name,StateWisePopulation.Tot_Population,StateAvgPopulation.Avg_pop,StateAvgPopulation.District_Count
 FROM StateWisePopulation
 INNER JOIN StateAvgPopulation ON StateWisePopulation.State_name = StateAvgPopulation.State_name
 ORDER BY StateWisePopulation.State_name
 
-SELECT * from StateTable
-
-ALTER Table StateTable
-DROP COLUMN Male_Population,
-Female_Population,
-Sex_Ratio
-
+SELECT * FROM StateTable
