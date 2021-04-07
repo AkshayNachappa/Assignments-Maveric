@@ -28,9 +28,9 @@ public class LoginServlet extends HttpServlet {
 	         
 	         PrintWriter out = response.getWriter();
 		
-	         out.println("<html><body><table border='1'><tr><td>State Name</td><td>"+category+"</td></tr>");
+	         out.println("<html><body><table border='1'><tr><td style=\"padding:5px\">State Name</td><td style=\"padding:5px\">"+category+"</td></tr>");
 	         while(rs.next()) {
-	        	 out.println("<tr><td>"+rs.getString(1)+"</td><td>"+ rs.getString(2)+"</td><tr>");
+	        	 out.println("<tr><td style=\"padding:5px\">"+rs.getString(1)+"</td><td  style=\"padding:5px\">"+ rs.getString(2)+"</td><tr>");
 	         }
 		
 	         out.println("</table></body></html>");
