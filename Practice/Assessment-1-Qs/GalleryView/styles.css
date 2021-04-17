@@ -3,6 +3,7 @@
   box-sizing: border-box;
 }
 /* Part A starts */
+/*
 #container{
     margin-left: 25%;
     margin-right:25%;
@@ -24,10 +25,10 @@
     
 }
 
-
+*/
 /* Part A ends */
 
-  /*
+  
   body { font-family: sans-serif; }
   
   .gallery {
@@ -39,13 +40,11 @@
     height: 200px;
     margin-right: 10px;
     background: #8C8;
-    counter-increment: gallery-cell;
+    
     
   }
   
   
-  /* cell number */
-  /*
   .gallery-cell:before {
     display: block;
     text-align: center;
@@ -54,4 +53,4 @@
     font-size: 80px;
     color: white;
   }
-  */
+  
