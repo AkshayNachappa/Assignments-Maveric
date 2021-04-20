@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Sorted Tasks</title>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <b style="margin-left: 45%;font-size:24px;color: aliceblue;">Sorted Tasks</b>   
+</head>
+<body >
+    
+    <div id="form">
+        <label for="task" style="margin-right: 2%;">Enter Task ID: </label>
+        <input id="taskID" type="number" placeholder="Enter #Task_ID" required>
+        <br><br><br>
+        <label for="dateTask" style="margin-right: 2%;">Date of Task: </label>
+        <input id="dateTask" type="datetime-local" placeholder="Select Date" required>
+        <br><br><br>
+        <input id="reset" type="button" value="Reset" onclick="reset()">
+        <input id="submit" type="button" value="Submit" style="margin-left: 20%;" onclick="submit()">
+
+    </div>
+</body>
+</html>
