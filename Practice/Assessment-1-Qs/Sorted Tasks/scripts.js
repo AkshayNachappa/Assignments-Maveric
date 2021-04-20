@@ -34,18 +34,26 @@ function submit() {
     var x = {task:p,date:newQ}
     obj.push(x);
     obj.sort((a,b)=>(a.date-b.date));
-    console.log(obj);
     var len = obj.length;
-    
-    
+    // for(var i=0;i<len;i++){
+    //     if(obj[i+1].date==obj[i].date){
+    //         if(obj[i+1].task>obj[i].task){
+    //         var temp = obj[i];
+    //         obj[i] = obj[i+1];
+    //         obj[i+1] = temp;
+    //         }
+    //     }
+    // } 
 
-
+    
     for(var i=len;i>0;i--){
         var row = table.insertRow(1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         cell1.innerHTML = obj[i-1].task;
-        cell2.innerHTML = obj[i-1].date;
+        let x = obj[i-1].date;
+        x = [x.slice(6),x.slice(4,6),x.slice(0,4)].join('-');
+        cell2.innerHTML = x;
     }
     var rowCount = table.rows.length;
     for(var i=len+1;i<=rowCount;i++)
