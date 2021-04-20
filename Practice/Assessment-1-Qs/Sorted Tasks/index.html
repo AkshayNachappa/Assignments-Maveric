@@ -4,10 +4,11 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
-    <b style="margin-left: 45%;font-size:24px;color: aliceblue;">Sorted Tasks</b>   
-</head>
-<body >
+    <b style="margin-left: 0%;font-size:24px;color: aliceblue;">Sorted Tasks</b>  
     
+</head>
+<body>
+    <p style="margin-left: 2%;color: aliceblue;" id="error_message_here"></p> 
     <div id="form">
         <label for="task" style="margin-right: 2%;">Enter Task ID: </label>
         <input id="taskID" type="number" placeholder="Enter #Task_ID" required>
@@ -19,5 +20,14 @@
         <input id="submit" type="button" value="Submit" style="margin-left: 20%;" onclick="submit()">
 
     </div>
+    <hr>
+    <p style="font-size: 18px;color: aliceblue;">Table</p>
+    <table id="table">
+        <tr>
+            <th>Task ID</th>
+            <th>Date of Task</th>
+        </tr>
+    </table>
+
 </body>
 </html>
