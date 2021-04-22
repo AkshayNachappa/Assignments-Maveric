@@ -45,7 +45,7 @@ function submit() {
     //     }
     // } 
 
-    
+    taskID.value = dateTask.value=null;
     for(var i=len;i>0;i--){
         var row = table.insertRow(1);
         var cell1 = row.insertCell(0);
@@ -58,7 +58,7 @@ function submit() {
     var rowCount = table.rows.length;
     for(var i=len+1;i<=rowCount;i++)
         table.deleteRow(len+1);
-
+    
     
 
     
