@@ -1,0 +1,27 @@
+<!-- Enter your HTML code here -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        #btn{
+            width: 96px;
+            height: 48px;
+            font-size: 24px;
+        }
+        </style>
+        
+        <meta charset="utf-8">
+        <title>Button</title>
+        <button id="btn" onclick="count()">0</button>
+    </head>
+    <body>
+        <script>
+              function count(){
+                var num = document.getElementById("btn").innerHTML;
+                num = parseInt(num);
+                num++;
+                document.getElementById("btn").innerHTML = num;
+                }
+        </script>
+    </body>
+</html>
