@@ -1,0 +1,26 @@
+#control{
+    padding-left: 6%;
+}
+body{
+    margin-left: 42%;
+    background-color: rgb(102, 101, 101);
+    color:aliceblue;
+}
+h2{
+    margin-left: 4%;
+}
+input{
+    margin-bottom: 1%;
+    
+}
+#elHide{
+    display: inline;
+    
+}
+#review{
+    margin-right: 70%;
+    padding: 1%;
+}
+#returnSpan,#fromSpan,#toSpan,#departureSpan{
+    margin-left: 10%;
+}

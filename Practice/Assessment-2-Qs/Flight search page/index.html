@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>Flight Search Page</title>
+    <head>
+        <h2>Flight Search Page</h2>
+        <link rel="stylesheet" href="styles.css">
+        <label for="from">From: </label>
+        <input type="text" id="from" style="margin-left: 6%;"><br>
+        <label for="to">To: </label>
+        <input type="text" id="to" style="margin-left: 8%;"><br>
+        <label for="departure">Departure: </label>
+        <input type="text" id="departure" style="margin-left: 2.7%;"><br>
+        <span class="elHide">
+            <label for="return">Return: </label>
+            <input type="text" id="return" style="margin-left: 5%;">
+        </span><br><br>
+
+        <div id="control">
+            <input type="radio" name="radioBtn" id="oneWayRadio" onclick="returnFlight()">
+            <label for="oneWayRadio">One Way</label><br>
+            <input type="radio" name="radioBtn" id="returnRadio" onclick="returnFlight()" checked>
+            <label for="returnRadio">Return</label><br><br>
+            <input type="button" value="Click me to Submit" id="submit" onclick="submit()">
+            <br><br><br>
+        </div>
+        <div id="review">
+            <h3 id="reviewText" style="text-align: center;"></h3>
+            <span id="fromSpan"></span><br><br>
+            <span id="toSpan"></span><br><br>
+            <span id="departureSpan"></span><br><br>
+            <span id="returnSpan"></span><br><br>
+        </div>
+        
+    </head>
+    <body>
+        <script src="scripts.js"></script>
+    </body>
+</html>
