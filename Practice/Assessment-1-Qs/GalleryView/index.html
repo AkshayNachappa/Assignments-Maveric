@@ -1,62 +1,33 @@
-<!DOCTYPE html>
-<html>
-    <!-- 
-        * The external CSS and JS files from https://css-tricks.com/css-only-carousel/
-        * Implementing actual left and right scroll buttons can be done here https://codepen.io/immad-hamid/pen/yEmayr
-    -->
-
+<html lang="en">
 <head>
-<title>Gallery View</title>
-<link rel="stylesheet" href="styles.css" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" type="text/css">
-<script src="scripts.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
-<!-- Part A starts-->
-<!--
-<div id="container" style="margin-left: 25%;margin-right:25%">
-    <div id="images"><img src="images/apple.png" width="150" onclick="disp('Apple')"></div>    
-    <div id="images"><img src="images/ball.jpg" width="115"onclick="disp('Ball')"></div>
-    <div id="images"><img src="images/cat.png" width="160"onclick="disp('Cat')"></div>
-    <div id="images"><img src="images/dog.png" width="120"onclick="disp('Dog')"></div>
-    <div id="images"><img src="images/egg.png" width="150"onclick="disp('Egg')"></div>
-    <div id="images"><img src="images/fish.png" width="150"onclick="disp('Fish')"></div>
-    <div id="images"><img src="images/gold.png" width="150"onclick="disp('Gold')"></div>
-    <div id="images"><img src="images/horse.png" width="150"onclick="disp('Horse')"></div>
-
-</div>
--->
-<!-- Part A ends-->
-
-<!-- Part B starts-->
-
-<div class="gallery js-flickity"
-  data-flickity-options='{ "wrapAround": true }'>
-  <div class="gallery-cell"><img src="images/apple.png" width="150" style="margin-inline-start: 40% ;" onclick="disp('Apple')"></div>
-  <div class="gallery-cell"><img src="images/ball.jpg" width="115" style="margin-inline-start: 40% ;" onclick="disp('Ball')"></div>
-  <div class="gallery-cell"><img src="images/cat.png" width="160" style="margin-inline-start: 40% ;" onclick="disp('Cat')"></div>
-  <div class="gallery-cell"><img src="images/dog.png" width="120" style="margin-inline-start: 40% ;" onclick="disp('Dog')"></div>
-  <div class="gallery-cell"><img src="images/egg.png" width="150" style="margin-inline-start: 40% ;" onclick="disp('Egg')"></div>
-  <div class="gallery-cell"><img src="images/fish.png" width="150" style="margin-inline-start: 40% ;"onclick="disp('Fish')"></div>
-  <div class="gallery-cell"><img src="images/gold.png" width="150" style="margin-inline-start: 40% ;"onclick="disp('Gold')"></div>
-  <div class="gallery-cell"><img src="images/horse.png" width="150" style="margin-inline-start: 40% ;"onclick="disp('Horse')"></div>
-</div>
-<br>
-<br>
-<br>
-
-<!-- Part B ends-->
-
-<!-- Part A starts-->
-<!--
-<div>
-<button id="slideLeft" type="button" style="margin-top: 5%;margin-left: 20%;"onclick="scrLt()"> << </button>
-<button id="slideRight" type="button" style="margin-left:60%" onclick="scrRt()"> >> </button>
-</div>
--->
-<!-- Part A ends-->
-
+    <link href="./styles.css" rel="stylesheet">
+    <script src="./app.js"></script>
 </head>
-<br>
-<br>
-<input id="res" style="margin-left: 45%;text-align: center;" type="text" name="res" placeholder="None Selected" readonly>
+
+<body>
+    <h1>Select one</h1>
+    <table>
+        <tr style="min-height: 34px;">
+            <td>
+                <button id="leftscroll" class="myBut" onclick="moveLeft()">Left</button>
+            </td>
+            <td>
+                <ul class="nav">
+                    <li id="list_a" class="myLi" onclick="displaySelect(id)">0</li>
+                    <li id="list_b" class="myLi" onclick="displaySelect(id)">1</li>
+                    <li id="list_c" class="myLi" onclick="displaySelect(id)">2</li>
+                </ul>
+            </td>
+            <td>
+                <button id="rightScroll" class="myBut" onclick="moveRight()">Right</button>
+            </td>
+
+        </tr>
+    </table>
+
+    <div id="displayText" style="display: block;">'--'</div>
+
+</body>
+
 </html>
+    

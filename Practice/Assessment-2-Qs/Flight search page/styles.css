@@ -14,7 +14,7 @@ input{
     
 }
 #elHide{
-    display: inline;
+    visibility: hidden;
     
 }
 #review{
